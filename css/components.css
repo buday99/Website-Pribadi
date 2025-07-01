@@ -1,0 +1,200 @@
+/* css/components.css */
+
+/* Buttons */
+.btn {
+    display: inline-flex; /* Use flex to align icon and text */
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    border: none;
+    gap: 10px; /* Space between text and icon */
+}
+
+.primary-btn {
+    background-color: var(--accent-blue);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+
+.primary-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.6);
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: var(--accent-blue);
+    border: 2px solid var(--accent-blue);
+}
+
+.secondary-btn:hover {
+    background-color: var(--accent-blue);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.small-btn {
+    padding: 10px 20px;
+    font-size: 0.9em;
+    border-radius: 5px;
+}
+
+/* Project Cards */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+}
+
+.project-card {
+    background-color: rgba(18, 18, 18, 0.8); /* Sedikit transparan */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--border-color);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    display: flex;
+    flex-direction: column; /* Ensure content stacks properly */
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7);
+}
+
+.project-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-info {
+    padding: 25px;
+    flex-grow: 1; /* Allow info section to take available space */
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.project-desc {
+    color: var(--text-muted);
+    font-size: 0.95em;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Allow description to grow */
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.tech-badge {
+    background-color: rgba(40, 167, 69, 0.15); /* Light green background */
+    color: var(--accent-green);
+    padding: 6px 14px;
+    border-radius: 15px;
+    font-size: 0.85em;
+    font-weight: 500;
+    border: 1px solid var(--accent-green);
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+    margin-top: auto; /* Push links to bottom */
+    padding-top: 15px; /* Add padding to separate from badges */
+    border-top: 1px solid rgba(255, 255, 255, 0.05); /* Subtle separator */
+}
+
+.project-links a {
+    flex: 1; /* Make buttons take equal width */
+    text-align: center;
+}
+
+.project-links a i {
+    margin-right: 8px;
+}
+
+/* Certificate Section Styles */
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+}
+
+.certificate-item {
+    background-color: rgba(31, 31, 31, 0.8); /* Sedikit transparan */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--border-color);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    display: flex;
+    flex-direction: column;
+}
+
+.certificate-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7);
+}
+
+.certificate-img {
+    width: 100%;
+    height: 180px; /* Adjust height as needed */
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.certificate-info {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.certificate-info h3 {
+    font-size: 1.6em;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.certificate-info .issuer {
+    color: var(--text-muted);
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.certificate-info .issue-date {
+    display: block;
+    font-size: 0.9em;
+    color: var(--accent-green); /* Green for dates */
+    margin-bottom: 20px;
+}
+
+.certificate-info .issue-date i {
+    margin-right: 8px;
+}
+
+/* Make sure .btn .small-btn styling applies correctly */
+.certificate-item .btn {
+    margin-top: auto; /* Push button to the bottom */
+    width: 100%; /* Make button full width */
+    text-align: center;
+}
